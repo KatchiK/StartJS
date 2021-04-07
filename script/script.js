@@ -24,7 +24,7 @@
  
 
   let deposit = confirm('Есть ли у вас депозит в банке');
-  let mission = 5000000000000000000;
+  let mission = 500000000;
   let period = 9;
 
   let expenses1 = prompt('Введите обязательную статью расходов?', 'Обучение');
@@ -32,34 +32,28 @@
   let expenses2 = prompt('Введите еще одну обязательную статью расходов?', 'реклама');
   let amount2 = +prompt('Во сколько обойдется еще одна статья расходов', '20000');
 
-  // let budgetMonth = (((money - (SumNumAddExpenses) -  amount1) - amount2));
+  let budgetMonth = (money - sumNumAddExpenses -  amount1 - amount2);//вычисление бюджета за месяц
  
-
-  //Проверка выводом в консоль
-  // console.log(typeof money);
-  // console.log(budgetMonth);
-  console.log(NumAddExpenses);
-  console.log(typeof NumAddExpenses[2]);
-  console.log(sumNumAddExpenses);
-  
-
 
   // Вывод в модальное окно
   // alert(income);
 
   //Вывод в консоль
-//   console.log(typeof money); // вывод типа данных
-//   console.log(typeof income); // вывод типа данных
-//   console.log(typeof deposit); // вывод типа данных
-//   console.log(addExpenses.length); // вывод количества символов
-//   console.log('Период равен ' + period + ' месяцев'); //Период равен (period) месяцев
-//   console.log('Цель заработать ' + mission + ' рублей/долларов/гривен/юани');//Цель заработать
-//   console.log(addExpenses.toLowerCase().split(', '));//перевод к нижнему регистру и вывод массива
+  console.log(typeof money); // вывод типа данных
+  console.log(typeof income); // вывод типа данных
+  console.log(typeof deposit); // вывод типа данных
+  console.log(addExpenses.length); // вывод количества символов
+  console.log('Период равен ' + period + ' месяцев'); //Период равен (period) месяцев
+  console.log('Цель заработать ' + mission + ' рублей');//Цель заработать
+  console.log(addExpenses);
+  console.log('Цель будет достигнута за ' +  Math.ceil(mission/budgetMonth) + ' месяцев');//вывод срока
+  
+
 
 // //объявление переменных
-//   let budgetDay = (money/30);
+  let budgetDay = (budgetMonth/30);
 
 //   //Вывод в консоль
-//   console.log(budgetDay);//вывод дневного бюджета
+  console.log('Бюджет на день = ' + budgetDay + 'руб.');//вывод дневного бюджета
 
   // console.log(confirm('эТекст'));// вывод вопроса да/нет в консоль
