@@ -16,8 +16,27 @@ let amount1 = +prompt('Во сколько это обойдется?', '30000')
 let expenses2 = prompt('Введите еще одну обязательную статью расходов', 'реклама');
 let amount2 = +prompt('Во сколько обойдется еще одна статья расходов', '20000');
 
-let budgetMonth = (money - amount1 - amount2);//вычисление бюджета за месяц
 
+//Функция возвращает сумму всех обязательных расходов за месяц
+function getExpensesMonth() {
+  return(amount1 + amount2);
+}
+
+//Функция возвращает Накопления за месяц (Доходы минус расходы)
+function getAccumulatedMonth() {
+  return(money - getExpensesMonth());
+}
+
+// Объявить переменную accumulatedMonth и присвоить ей результат вызова функции getAccumulatedMonth 
+let accumulatedMonth = getAccumulatedMonth();
+
+//Подсчитывает за какой период будет достигнута цель, зная результат месячного накопления и возвращает результат
+function getTargetMonth() {
+  return(mission / getAccumulatedMonth());
+}
+
+//назначение бюджета за день
+let budgetDay = (accumulatedMonth / 30);
 
 //Вывод в консоль
 let showTypeOf = function (data) {
@@ -27,22 +46,18 @@ showTypeOf(money);
 showTypeOf(income);
 showTypeOf(deposit);
 
-console.log(addExpenses.length); // вывод количества слов
-console.log(addExpenses);
-console.log(addExpenses.split(','));
-console.log('Период равен ' + period + ' месяцев'); //Период равен (period) месяцев
-console.log('Цель заработать ' + mission + ' рублей');//Цель заработать
-console.log('Цель будет достигнута за ' + Math.ceil(mission / budgetMonth) + ' месяцев');//вывод срока
+// console.log(addExpenses.length); // вывод количества слов
+console.log('Расходы за месяц, вызов getExpensesMonth: ' + getExpensesMonth() + 'руб.');
+console.log(addExpenses.split(','));//'Вывод возможных расходов в виде массива (addExpenses): ' + 
+// console.log('Период равен ' + period + ' месяцев'); //Период равен (period)месяцев
+// console.log('Цель заработать ' + mission + ' рублей');//Цель заработать
+console.log('Cрок достижения цели в месяцах (результат вызова функции getTargetMonth): ' + Math.ceil(getTargetMonth()) + ' месяцев');//вывод срока
 
-
-
-//объявление переменных
-let budgetDay = (budgetMonth / 30);
 
 //Вывод в консоль
 console.log('Бюджет на день = ' + budgetDay + 'руб.');//вывод дневного бюджета
 
-// конструкция условий
+// вызов функции getStatusIncome
 let getStatusIncome = function () {
   if (budgetDay >= 1200) {
     return ('У вас высокий уровень дохода');
@@ -55,5 +70,5 @@ let getStatusIncome = function () {
   }
 };
 
-console.log(getStatusIncome());
+console.log('вызов функции getStatusIncome: ' + getStatusIncome());
 
