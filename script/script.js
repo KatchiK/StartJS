@@ -18,21 +18,21 @@ let amount2 = +prompt('Во сколько обойдется еще одна с
 
 
 //Функция возвращает сумму всех обязательных расходов за месяц
-function getExpensesMonth() {
-  return(amount1 + amount2);
+function getExpensesMonth(a, b) {
+  return(a + b);
 }
 
 //Функция возвращает Накопления за месяц (Доходы минус расходы)
-function getAccumulatedMonth() {
-  return(money - getExpensesMonth());
+function getAccumulatedMonth(a, b) {
+  return(a - b);
 }
 
 // Объявить переменную accumulatedMonth и присвоить ей результат вызова функции getAccumulatedMonth 
-let accumulatedMonth = getAccumulatedMonth();
+let accumulatedMonth = getAccumulatedMonth(money, getExpensesMonth(amount1, amount1));
 
 //Подсчитывает за какой период будет достигнута цель, зная результат месячного накопления и возвращает результат
 function getTargetMonth() {
-  return(mission / getAccumulatedMonth());
+  return(mission / getAccumulatedMonth(money, getExpensesMonth(amount1, amount1)));
 }
 
 //назначение бюджета за день
@@ -47,7 +47,7 @@ showTypeOf(income);
 showTypeOf(deposit);
 
 // console.log(addExpenses.length); // вывод количества слов
-console.log('Расходы за месяц, вызов getExpensesMonth: ' + getExpensesMonth() + 'руб.');
+console.log('Расходы за месяц, вызов getExpensesMonth: ' + getExpensesMonth(amount1, amount1) + 'руб.');
 console.log(addExpenses.split(','));//'Вывод возможных расходов в виде массива (addExpenses): ' + 
 // console.log('Период равен ' + period + ' месяцев'); //Период равен (period)месяцев
 // console.log('Цель заработать ' + mission + ' рублей');//Цель заработать
