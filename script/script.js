@@ -17,12 +17,11 @@ let mission = 500000000;
 let period = 9;
 
 let start = function(){
-  money = +prompt('Ваш месячный доход?', '500000');
-
-  while (!isNumber(money)){
-  money = +prompt('Ваш месячный доход?', '500000');
-  }
+  do {
+  money = prompt('Ваш месячный доход?', '500000');
+  } while (!isNumber(money));
 };
+money = +money;
 start();
 
 // let expenses1 = prompt('Введите обязательную статью расходов', 'Обучение');
@@ -83,7 +82,7 @@ showTypeOf(income);
 showTypeOf(deposit);
 
 // console.log(addExpenses.length); // вывод количества слов
-console.log('Расходы за месяц, вызов expensesAmount: ' + expensesAmount + 'руб.', typeof(expensesAmount));
+console.log('Расходы за месяц, вызов expensesAmount: ' + expensesAmount + 'руб.');
 console.log(addExpenses.split(','));//'Вывод возможных расходов в виде массива (addExpenses): ' + 
 
 
