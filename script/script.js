@@ -1,6 +1,19 @@
 'use strict';
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 // Переменная для проверки числового значения
 let isNumber = function(n){
   return !isNaN(parseFloat(n)) && isFinite(n);
@@ -112,3 +125,4 @@ let getStatusIncome = function () {
 
 console.log('вызов функции getStatusIncome: ' + getStatusIncome());
 
+*/
