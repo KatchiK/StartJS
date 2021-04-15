@@ -1,8 +1,44 @@
 'use strict';
 
+// Переменная для проверки числового значения
+let isNumber = function(n){
+  return !isNaN(parseFloat(n)) && isFinite(n);
+};
 
+//функция определения рандомного числа от 1 до 100
+function compNumber() {
+  return Math.ceil(Math.random()*100);
+    }
 
+let varCompNumber = compNumber();
+console.log(varCompNumber, typeof(varCompNumber));
 
+// function userNumber(){
+// return +prompt('Угадай число от 1 до 100', 30);
+// }
+
+// let varUserNumber = userNumber();
+
+function funcComparison(){
+  let varUserNumber = prompt('Угадай число от 1 до 100', 30);
+  console.log(varUserNumber, typeof(varUserNumber));
+  if (varUserNumber === null){
+    alert('Игра окончена');
+  } else if(!isNumber(varUserNumber)){
+    alert('Введи число!!!');
+    funcComparison();
+  }else if (varCompNumber > varUserNumber){
+  alert('Загаданное число меньше.');
+  funcComparison();
+} else if (varCompNumber < varUserNumber){
+    alert('Загаданное число больше.');
+    funcComparison();
+} else {
+  alert('Поздравляю, Вы угадали!!!');
+}
+}
+
+funcComparison();
 
 
 
