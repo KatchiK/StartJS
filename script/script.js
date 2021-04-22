@@ -110,3 +110,4 @@ for (let key in appData) {
 
   console.log( "Ключ: " + key + " значение: " + appData[key] );
 }
+

@@ -1,0 +1,16 @@
+* [33m13b7639[m[33m ([m[1;36mHEAD -> [m[1;32mlesson07[m[33m)[m start lesson07
+* [33m0b97894[m start lesson07
+* [33m67c8b67[m[33m ([m[1;31morigin/lesson06[m[33m, [m[1;32mlesson06[m[33m)[m lesson06 v1.0
+* [33mc8dffd8[m clear
+* [33m2b044e3[m[33m ([m[1;31morigin/lesson05[m[33m, [m[1;32mlesson05[m[33m)[m rewritten the start function with the do while loop
+* [33m3063b94[m added check for the getExpensesMonth function, getTargetMonth negativity check
+* [33md0ebf9e[m[33m ([m[1;31morigin/lesson04[m[33m, [m[1;32mlesson04[m[33m)[m fixed to getExpensesMonth, getAccumulatedMonth
+* [33me075601[m add function
+* [33m1301493[m[33m ([m[1;31morigin/lesson03[m[33m, [m[1;32mlesson03[m[33m)[m fixed it addExpenses
+* [33m4f0628c[m added condition construction
+* [33m227c5cc[m added output of a goal for a month, for a day
+* [33m6f78b22[m added array sum calculation
+* [33m0d09cf5[m[33m ([m[1;31morigin/lesson02[m[33m, [m[1;32mlesson02[m[33m)[m assigned data to variables; output to the console
+* [33m8e9fcd4[m assigned data to variables
+* [33m67ab8c2[m[33m ([m[1;31morigin/lesson01[m[33m, [m[1;32mlesson01[m[33m)[m Назначил переменные, вывел инф. в мод. окно, вывел текст в консоль
+* [33m84a299f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m Подготовил файлы к исполнению ДЗ
